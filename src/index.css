@@ -1,0 +1,28 @@
+@import "tailwindcss";
+/* Prevent text selection and focus outlines globally */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection only in input, textarea and contenteditable */
+input, textarea, [contenteditable] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Remove focus outlines but keep accessibility for keyboard users */
+*:focus {
+  outline: none;
+}
+
+/* Keep focus styles only for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #DC2626; /* Red color for focus */
+  outline-offset: 2px;
+}
