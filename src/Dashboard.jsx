@@ -95,12 +95,12 @@ const Dashboard = () => {
 
   // Handle navigation to User Management
   const handleViewAllUsers = () => {
-    navigate('/user-management');
+    navigate('/users');
   };
 
   // Handle navigation to individual user details (click on user row)
   const handleViewUserDetails = (userId) => {
-    navigate(`/user-management/${userId}`);
+    navigate(`/users/${userId}`);
   };
 
   const stats = [
@@ -240,7 +240,10 @@ const Dashboard = () => {
                 {loading ? (
                   Array.from({ length: 5 }).map((_, index) => (
                     <tr key={index} className="animate-pulse">
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td
+  className="px-6 py-4 whitespace-nowrap"
+  onClick={(e) => e.stopPropagation()}
+>
                         <div className="flex items-center">
                           <div className="h-10 w-10 rounded-full bg-gray-200"></div>
                           <div className="ml-4">
@@ -263,10 +266,9 @@ const Dashboard = () => {
                 ) : users.length > 0 ? (
                   users.slice(0, 5).map((user) => (
                     <tr 
-                      key={user.id} 
-                      className="hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
-                      onClick={() => handleViewUserDetails(user.id)}
-                    >
+  key={user.id} 
+  className="hover:bg-gray-50 transition-colors duration-200"
+>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
                           <div className="h-10 w-10 rounded-full bg-gradient-to-r from-red-100 to-red-200 flex items-center justify-center">
