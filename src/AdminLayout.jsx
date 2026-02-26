@@ -71,7 +71,7 @@ const AdminLayout = () => {
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-semibold text-gray-800 truncate select-none">Admin User</p>
-                <p className="text-xs font-medium text-gray-500 truncate select-none">admin@koso.com</p>
+                {/* <p className="text-xs font-medium text-gray-500 truncate select-none">admin@koso.com</p> */}
               </div>
             </div>
 
