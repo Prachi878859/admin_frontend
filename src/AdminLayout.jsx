@@ -8,7 +8,7 @@ const AdminLayout = () => {
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated');
     localStorage.removeItem('user');
-    navigate('/');
+    navigate('/');                      
   };
 
   return (

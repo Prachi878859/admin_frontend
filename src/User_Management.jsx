@@ -3177,9 +3177,9 @@ const UserManagement = () => {
                       {addFormErrors.Password && (
                         <p className="mt-1 text-sm text-red-600">{addFormErrors.Password}</p>
                       )}
-                      <p className="mt-2 text-xs text-gray-500 italic">
+                      {/* <p className="mt-2 text-xs text-gray-500 italic">
                         Note: For security reasons, passwords are currently stored in plain text. Consider updating to hashed passwords in production.
-                      </p>
+                      </p> */}
                     </div>
 
                     {/* Form actions - Responsive button layout */}
